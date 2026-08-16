@@ -59,7 +59,23 @@ As of Apollo Client v4:
 - `ApolloProvider`, `useQuery`, `useMutation` — moved to the `@apollo/client/react`
   subpath.
 - `MockedProvider` (for tests, see `references/rspec-testing.md`'s frontend section in
-  SKILL.md) — moved to `@apollo/client/testing/react`.
+  SKILL.md) — moved to `@apollo/client/testing/react`. The `MockedResponse` *type* did
+  not move with it — that subpath only exports `MockedProvider`/`MockedProviderProps`.
+  `MockedResponse` now lives as `MockLink.MockedResponse` under the non-`/react` path,
+  `@apollo/client/testing`:
+  ```ts
+  import { MockedProvider } from "@apollo/client/testing/react";
+  import type { MockLink } from "@apollo/client/testing";
+
+  const mock: MockLink.MockedResponse = {
+    request: { query: GET_BOOKMARKS, variables: {} },
+    result: { data: { bookmarks: [] } },
+  };
+  ```
+  Importing `MockedResponse` from `@apollo/client/testing/react` fails immediately with
+  "has no exported member 'MockedResponse'" — easy to reach for anyway since
+  `MockedProvider` (which *does* live there) is naturally imported on the same line out
+  of habit.
 - The `uri` shorthand on the `ApolloClient` constructor is gone — construct an explicit
   `HttpLink` instead.
 
