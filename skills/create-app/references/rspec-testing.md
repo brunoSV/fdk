@@ -1,6 +1,6 @@
 # RSpec testing
 
-Applies in Checkpoint D (Step 4), after `rails generate rspec:install` ran during Checkpoint A.
+Applies in Checkpoint C (Step 4), after `rails generate rspec:install` ran during Checkpoint A.
 
 ## FactoryBot is a default, not a requirement
 

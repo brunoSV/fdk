@@ -1,6 +1,6 @@
 # React + TypeScript frontend (Vite)
 
-Applies when Checkpoint C scaffolds a React SPA via `scripts/scaffold_frontend.sh`, on top
+Applies when Checkpoint D scaffolds a React SPA via `scripts/scaffold_frontend.sh`, on top
 of `references/api-development.md` (REST) or `references/graphql-api.md` (GraphQL) for how
 the API layer itself works.
 
