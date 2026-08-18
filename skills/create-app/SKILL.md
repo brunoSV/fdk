@@ -78,7 +78,7 @@ Add the GraphQL or REST layer identified in Step 2, and finish the admin CRUD vi
 
 Narrate how types/endpoints map to the models from Checkpoint A, what's queryable vs. mutable, and any computed/resolved fields (e.g. a `comment_count` with no backing column).
 
-Show: run one query live in GraphiQL (or hit one endpoint with `curl` for REST), and click through the admin CRUD in the browser.
+Show: run one query live in GraphiQL (or hit one endpoint with `curl` for REST), and click through the admin CRUD in the browser. For GraphQL, also open the GraphiQL URL (`http://localhost:3000/graphiql` by default — adjust for whatever port the dev server actually bound to) in a browser tab via the `claude-in-chrome` tools, so the user has it ready to poke at themselves instead of just seeing a description of it. Pre-fill the editor with a real, runnable example instead of leaving it blank — GraphiQL reads an initial query (and `variables`/`operationName`) from URL-encoded `?query=`/`?variables=` params, so navigate straight to a URL carrying one; if the mounted version doesn't pick those up, type the query into the editor directly via `computer` instead. Cover a query and, if any mutations exist, one mutation too — pick ones that touch real seeded/example data (real ids, not placeholders) so running them on the spot actually returns something. Narrate two or three more variations (a filtered query, another mutation) directly in chat as copy-pasteable GraphQL, the same way the final report hands over `curl` examples, so the user has several working starting points instead of just the one query left in the editor.
 
 Checkpoint line before moving on: "Backend's done and queryable — let's lock it in with tests before moving on to React."
 
