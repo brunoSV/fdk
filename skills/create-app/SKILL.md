@@ -1,8 +1,11 @@
 ---
 description: FDK — capture requirements for a new Rails product and scaffold it into ~/Documents/projects/<slug>. Invoked as /fdk:create-app <product description>.
+version: 1.0.0
 ---
 
 Turn the product description in "$ARGUMENTS" into a running Rails app skeleton in `~/Documents/projects/<slug>`, via requirements Q&A → approved plan → scaffold.
+
+**Before starting each checkpoint in Step 4, re-read this file fresh from disk (even if it was already read earlier in the session) and print the version you loaded, e.g. `SKILL.md version: 1.0.0`.** This file gets edited between and during sessions — a copy cached in context from an earlier turn can silently miss rules that were fixed since, so treat "checkpoint start" as a trigger to reload it rather than trusting what's already in context.
 
 Environment on this machine: Homebrew, mise-managed Ruby 3.3.12, Rails 8.1.3.1, Postgres 17 (running as a brew service). No Node.js installed — fine for the default importmap-based stack; flag it if the requirements need a JS build step (React, esbuild, etc.).
 
